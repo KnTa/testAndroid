@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">testAndroid</string>
+    <string name="btnNextToCount">Next</string>
+</resources>
