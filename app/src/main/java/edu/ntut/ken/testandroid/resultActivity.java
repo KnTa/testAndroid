@@ -16,9 +16,9 @@ public class resultActivity extends AppCompatActivity {
 
         btnTop = (Button) findViewById(R.id.btnTop);
         btnTop.setOnClickListener(
-                new View.OnClickListener(){
+                new View.OnClickListener() {
                     @Override
-                    public void onClick(View view){
+                    public void onClick(View view) {
                         finish();
                     }
                 }

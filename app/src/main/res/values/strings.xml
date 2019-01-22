@@ -1,7 +1,8 @@
 <resources>
     <string name="app_name">testAndroid</string>
-    <string name="btnNext">Next</string>
+    <string name="next">Next</string>
     <string name="title_activity_count_down">CountDownActivity</string>
     <string name="cancel">Cancel</string>
-    <string name="btnTop">Top</string>
+    <string name="top">Top</string>
+    <string name="start">Start</string>
 </resources>

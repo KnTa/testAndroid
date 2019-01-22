@@ -15,18 +15,18 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        btnNextToCount=(Button) findViewById(R.id.btnNextToCount);
+        btnNextToCount = (Button) findViewById(R.id.btnNextToCount);
         btnNextToCount.setOnClickListener(
-                new View.OnClickListener(){
+                new View.OnClickListener() {
                     @Override
-                    public void onClick(View view){
+                    public void onClick(View view) {
                         launchCountActivity();
                     }
                 }
         );
     }
 
-    private void launchCountActivity(){
+    private void launchCountActivity() {
         Intent intent = new Intent(this, CountDownActivity.class);
         startActivity(intent);
     }
