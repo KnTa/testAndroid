@@ -6,4 +6,5 @@
     <string name="top">主畫面</string>
     <string name="title_activity_count_down">CountDown</string>
     <string name="start">開始</string>
+    <string name="distance">距離</string>
 </resources>

@@ -6,6 +6,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
 
 import com.github.mikephil.charting.charts.LineChart;
 import com.github.mikephil.charting.components.XAxis;
@@ -28,6 +30,8 @@ public class resultActivity extends AppCompatActivity {
     LineChart  chart;
     LineDataSet dataSet1, dataSet2;
     LineData data;
+    CheckBox chkDistance;
+    List<ILineDataSet> dataSets = new ArrayList<ILineDataSet>();
 
     private final float maxYValOfData1 =120f;
 
@@ -61,7 +65,6 @@ public class resultActivity extends AppCompatActivity {
         dataSet2.setDrawValues(true);//在点上显示数值 默认true
         dataSet2.setValueTextSize(12f);//数值字体大小，同样可以设置字体颜色、自定义字体等
 
-        List<ILineDataSet> dataSets = new ArrayList<ILineDataSet>();
         dataSets.add(dataSet1);
         dataSets.add(dataSet2);
 
@@ -83,8 +86,6 @@ public class resultActivity extends AppCompatActivity {
         chart.setHighlightPerTapEnabled(false);
         chart.invalidate();
 
-
-
         btnTop = (Button) findViewById(R.id.btnTop);
         btnTop.setOnClickListener(
                 new View.OnClickListener() {
@@ -94,7 +95,24 @@ public class resultActivity extends AppCompatActivity {
                     }
                 }
         );
+        chkDistance=(CheckBox) findViewById(R.id.chbDistance);
+        chkDistance.setOnCheckedChangeListener(changeListener);
+        chkDistance.setChecked(true);
     }
+    private CheckBox.OnCheckedChangeListener changeListener= new CheckBox.OnCheckedChangeListener(){
+        @Override
+        public void onCheckedChanged(CompoundButton buttonView,boolean isChecked){
+            if (chkDistance.isChecked()){
+                if(!dataSets.contains(dataSet2)){
+                    dataSets.add(dataSet2);
+                }
+                chart.invalidate();
+            }else{
+                dataSets.remove(dataSet2);
+                chart.invalidate();
+            }
+        }
+    };
 
     private void setDataSet1YAxisMaxVal(Entry p_entry, YAxis yAxiss){
         if(p_entry.getY()>maxYValOfData1){
