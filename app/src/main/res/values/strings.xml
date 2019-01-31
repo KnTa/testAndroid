@@ -6,4 +6,7 @@
     <string name="top">Top</string>
     <string name="start">Start</string>
     <string name="distance">Distance</string>
+    <string name="met">MET</string>
+    <string name="empty" >empty</string>
+    <string name="totalDistance">Total Distance:</string>
 </resources>
