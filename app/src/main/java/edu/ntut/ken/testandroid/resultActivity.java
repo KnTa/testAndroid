@@ -49,7 +49,7 @@ class MyXAxisValueFormatter implements IAxisValueFormatter {
 
     @Override
     public String getFormattedValue(float value, AxisBase axis) {
-        return String.format("02%d:02%d",(int)(value/60),(int)(value%60));
+        return String.format("%02d:%02d",(int)(value/60),(int)(value%60));
     }
 }
 
@@ -98,7 +98,7 @@ public class resultActivity extends AppCompatActivity {
         dataSetHeart.setDrawValues(true);//在点上显示数值 默认true
         dataSetHeart.setValueTextSize(12f);//数值字体大小，同样可以设置字体颜色、自定义字体等
 
-        dataSetMet = new LineDataSet(metList, "Met");
+        dataSetMet = new LineDataSet(metList, "MET");
         dataSetMet.setAxisDependency(YAxis.AxisDependency.LEFT);
         dataSetMet.setColor(Color.GREEN); // 设置点击某个点时，横竖两条线的颜色
         dataSetMet.setDrawValues(true);//在点上显示数值 默认true
@@ -126,7 +126,7 @@ public class resultActivity extends AppCompatActivity {
         chart.setData(data);
         XAxis xAxis = chart.getXAxis();
         xAxis.setDrawGridLines(true);
-        xAxis.setGranularity(20f);
+        xAxis.setGranularity(30f);
         xAxis.setDrawLabels(true);
         xAxis.setValueFormatter(new MyXAxisValueFormatter());
         YAxis leftAxis = chart.getAxisLeft();

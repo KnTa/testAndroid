@@ -9,13 +9,14 @@
     <com.github.mikephil.charting.charts.LineChart
         android:id="@+id/chart"
         android:layout_width="match_parent"
-        android:layout_height="550dp"
-        android:layout_marginBottom="16dp"
+        android:layout_height="469dp"
+        android:layout_marginBottom="42dp"
         app:layout_constraintBottom_toTopOf="@+id/chbDistance"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="spread_inside">
 
     </com.github.mikephil.charting.charts.LineChart>
 
@@ -23,23 +24,20 @@
         android:id="@+id/btnTop"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="60dp"
+        android:layout_marginBottom="24dp"
         android:text="@string/top"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/chbDistance" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <CheckBox
         android:id="@+id/chbDistance"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="27dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
         android:text="@string/distance"
-        app:layout_constraintBottom_toTopOf="@+id/btnTop"
-        app:layout_constraintEnd_toStartOf="@+id/chbMET"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/chart" />
 
@@ -47,21 +45,24 @@
         android:id="@+id/chbMET"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
         android:text="@string/met"
-        app:layout_constraintBottom_toTopOf="@+id/btnTop"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/chbDistance"
-        app:layout_constraintTop_toBottomOf="@+id/chart"
-        app:layout_constraintVertical_bias="0.531" />
+        app:layout_constraintTop_toBottomOf="@+id/chart" />
 
     <TextView
         android:id="@+id/txvTotalDistance"
-        android:layout_width="231dp"
-        android:layout_height="25dp"
+        android:layout_width="360dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="40dp"
         android:text="@string/empty"
-        android:textAlignment="center"
-        app:layout_constraintBottom_toTopOf="@+id/btnTop"
+        android:textAlignment="viewStart"
+        android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.257"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chart" />
 
 </android.support.constraint.ConstraintLayout>
