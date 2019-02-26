@@ -10,4 +10,5 @@
     <string name="met">MET</string>
     <string name="empty" >empty</string>
     <string name="totalDistance">Total Distance:</string>
+    <string name="threeMinute">三分鐘行走測試</string>
 </resources>

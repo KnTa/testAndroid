@@ -7,6 +7,10 @@
     <string name="start">Start</string>
     <string name="distance">Distance</string>
     <string name="met">MET</string>
-    <string name="empty" >empty</string>
+    <string name="empty">empty</string>
     <string name="totalDistance">Total Distance:</string>
+    <string name="threeMinute">Three Minute Walking Test</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

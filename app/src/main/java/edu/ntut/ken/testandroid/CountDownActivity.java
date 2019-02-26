@@ -10,7 +10,7 @@ import android.os.CountDownTimer;
 
 public class CountDownActivity extends AppCompatActivity {
 
-    Button btnNextToResult, btnStartCount;
+    Button btnNextToResult, btnStartCount, btnTop;
     TextView txtCounter;
 
     @Override
@@ -42,6 +42,16 @@ public class CountDownActivity extends AppCompatActivity {
                     @Override
                     public void onClick(View view) {
                         launchResult();
+                        finish();
+                    }
+                }
+        );
+
+        btnTop = (Button) findViewById(R.id.btnTop);
+        btnTop.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
                         finish();
                     }
                 }

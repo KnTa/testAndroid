@@ -9,7 +9,7 @@
     <com.github.mikephil.charting.charts.LineChart
         android:id="@+id/chart"
         android:layout_width="match_parent"
-        android:layout_height="469dp"
+        android:layout_height="270dp"
         android:layout_marginBottom="42dp"
         app:layout_constraintBottom_toTopOf="@+id/chbDistance"
         app:layout_constraintEnd_toEndOf="parent"

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@+id/mainActivity">
+
+    <activity
+        android:id="@+id/mainActivity"
+        android:name="edu.ntut.ken.testandroid.MainActivity"
+        android:label="activity_main"
+        tools:layout="@layout/activity_main" />
+    <activity
+        android:id="@+id/countDownActivity"
+        android:name="edu.ntut.ken.testandroid.CountDownActivity"
+        android:label="activity_count_down"
+        tools:layout="@layout/activity_count_down" />
+    <activity
+        android:id="@+id/resultActivity"
+        android:name="edu.ntut.ken.testandroid.resultActivity"
+        android:label="activity_result"
+        tools:layout="@layout/activity_result" />
+</navigation>
